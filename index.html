@@ -3,59 +3,105 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Приглашение на роспись Алексея и Юлии">
-    <title>Алексей & Юлия | Приглашение</title>
+    <meta name="description" content="Приглашение на торжественную церемонию Алексея и Юлии">
+    <title>Алексей & Юлия | 05.09.2026</title>
     <link rel="stylesheet" href="./styles.css">
   </head>
   <body>
-    <main class="page">
-      <section class="invitation" aria-label="Приглашение на роспись">
-        <div class="visual" aria-hidden="true"></div>
-        <div class="petals" aria-hidden="true">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
+    <main>
+      <section class="hero" aria-label="Приглашение на свадьбу">
+        <div class="hero-media" aria-hidden="true">
+          <img src="./assets/palace-tyumen.png" alt="">
         </div>
-        <div class="glow" aria-hidden="true"></div>
+        <div class="hero-shade" aria-hidden="true"></div>
 
-        <article class="card">
-          <p class="overline">приглашение на роспись</p>
+        <div class="hero-content">
+          <p class="eyebrow">приглашение на церемонию</p>
           <h1>Алексей <span>&</span> Юлия</h1>
-          <p class="lead">
-            Мы будем рады разделить с вами день, когда скажем друг другу
-            самое важное "да".
-          </p>
-
-          <div class="details" aria-label="Детали церемонии">
-            <div>
-              <span>Дата</span>
-              <strong id="event-date">уточняется</strong>
-            </div>
-            <div>
-              <span>Время</span>
-              <strong id="event-time">уточняется</strong>
-            </div>
-            <div class="wide">
-              <span>Место</span>
-              <strong id="event-place">ЗАГС</strong>
-            </div>
-          </div>
-
-          <p class="text" id="invite-text">
-            Дорогие родные и друзья! Приглашаем вас стать свидетелями нашей
-            росписи и провести этот теплый момент рядом с нами.
-          </p>
-
-          <div class="actions">
-            <a class="button primary" id="map-link" href="#" target="_blank" rel="noreferrer">
-              Открыть карту
-            </a>
-          </div>
-        </article>
+          <p class="hero-date">05.09.2026</p>
+          <a class="scroll-link" href="#invitation">Открыть приглашение</a>
+        </div>
       </section>
+
+      <section class="section intro" id="invitation">
+        <p class="script">с любовью</p>
+        <h2>Дорогие гости!</h2>
+        <p>
+          В нашей жизни предстоят счастливые перемены. Мы будем рады разделить
+          с вами день, когда скажем друг другу самое важное "да".
+        </p>
+        <p class="names">Алексей и Юлия</p>
+      </section>
+
+      <section class="section timeline" aria-label="Программа дня">
+        <div class="section-heading">
+          <span>программа дня</span>
+          <h2>5 сентября 2026</h2>
+        </div>
+
+        <div class="timeline-list">
+          <article class="timeline-item">
+            <time datetime="2026-09-05T14:30">14:30</time>
+            <div>
+              <h3>Сбор гостей</h3>
+              <p>Встречаемся у Дворца бракосочетания.</p>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <time datetime="2026-09-05T15:00">15:00</time>
+            <div>
+              <h3>Торжественная церемония</h3>
+              <p>Начало регистрации брака.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section venue" aria-label="Место церемонии">
+        <div class="venue-photo">
+          <img src="./assets/palace-tyumen.png" alt="Дворец бракосочетания в Тюмени">
+        </div>
+        <div class="venue-copy">
+          <span class="label">место церемонии</span>
+          <h2>Дворец бракосочетания</h2>
+          <p>Тюмень, ул. Малыгина, 85</p>
+          <a class="button" id="map-link" href="#" target="_blank" rel="noreferrer">
+            Открыть карту
+          </a>
+        </div>
+      </section>
+
+      <section class="section dress-code" aria-label="Дресс-код">
+        <div class="section-heading">
+          <span>дресс-код</span>
+          <h2>Будем рады, если вы поддержите цветовую гамму дня</h2>
+        </div>
+        <div class="palette" aria-label="Цвета дресс-кода">
+          <span style="--swatch: #ffffff">белый</span>
+          <span style="--swatch: #151311">черный</span>
+          <span style="--swatch: #eadbd0">пудровый</span>
+          <span style="--swatch: #d6bda8">телесный</span>
+          <span style="--swatch: #b89a84">пастельный коричневый</span>
+        </div>
+      </section>
+
+      <section class="section media-section" aria-label="Медиа">
+        <div class="section-heading">
+          <span>моменты</span>
+          <h2>Фото, видео и музыка</h2>
+        </div>
+        <div class="media-grid">
+          <div class="media-placeholder">место для фото</div>
+          <div class="media-placeholder">место для видео</div>
+          <div class="media-placeholder">место для звука</div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <p>До встречи на церемонии</p>
+        <strong>05.09.2026</strong>
+      </footer>
     </main>
 
     <script src="./script.js"></script>
