@@ -1,0 +1,450 @@
+:root {
+  --ink: #3f332f;
+  --muted: #796b65;
+  --paper: #fffaf4;
+  --paper-soft: rgba(255, 250, 244, 0.9);
+  --line: rgba(111, 84, 72, 0.22);
+  --rose: #b66d75;
+  --sage: #778a78;
+  --gold: #b28b4a;
+  --shadow: 0 26px 70px rgba(65, 43, 34, 0.2);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  color: var(--ink);
+  font-family: Georgia, "Times New Roman", serif;
+  background: #ece3da;
+  overflow-x: hidden;
+}
+
+button,
+a {
+  font: inherit;
+}
+
+.page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+}
+
+.invitation {
+  width: min(1040px, 100%);
+  min-height: min(720px, calc(100vh - 40px));
+  position: relative;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  background: var(--paper);
+}
+
+.visual {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(255, 250, 244, 0.9), rgba(255, 250, 244, 0.5)),
+    url("./assets/wedding-bg.png") center / cover no-repeat;
+  transform: scale(1.01);
+  animation: slow-pan 18s ease-in-out infinite alternate;
+}
+
+.visual::after {
+  content: "";
+  position: absolute;
+  inset: 22px;
+  border: 1px solid rgba(178, 139, 74, 0.45);
+  border-radius: 6px;
+  animation: frame-glow 4s ease-in-out infinite;
+}
+
+.glow {
+  position: absolute;
+  width: min(480px, 80vw);
+  aspect-ratio: 1;
+  right: -140px;
+  top: -120px;
+  background: radial-gradient(circle, rgba(255, 246, 220, 0.72), rgba(255, 246, 220, 0));
+  filter: blur(4px);
+  animation: glow-drift 12s ease-in-out infinite alternate;
+}
+
+.petals {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.petals span {
+  position: absolute;
+  top: -70px;
+  width: 16px;
+  height: 24px;
+  border-radius: 16px 2px 16px 2px;
+  background: linear-gradient(135deg, rgba(255, 250, 244, 0.92), rgba(182, 109, 117, 0.36));
+  box-shadow: 0 8px 18px rgba(102, 62, 57, 0.1);
+  opacity: 0;
+  animation: petal-fall 11s linear infinite;
+}
+
+.petals span:nth-child(1) {
+  left: 8%;
+  animation-delay: 0s;
+}
+
+.petals span:nth-child(2) {
+  left: 24%;
+  width: 12px;
+  height: 20px;
+  animation-delay: 2.3s;
+  animation-duration: 13s;
+}
+
+.petals span:nth-child(3) {
+  left: 48%;
+  animation-delay: 4.1s;
+  animation-duration: 12s;
+}
+
+.petals span:nth-child(4) {
+  left: 66%;
+  width: 13px;
+  height: 21px;
+  animation-delay: 1.2s;
+  animation-duration: 14s;
+}
+
+.petals span:nth-child(5) {
+  left: 82%;
+  animation-delay: 5.4s;
+  animation-duration: 12.5s;
+}
+
+.petals span:nth-child(6) {
+  left: 92%;
+  width: 11px;
+  height: 19px;
+  animation-delay: 7s;
+  animation-duration: 15s;
+}
+
+.card {
+  position: relative;
+  width: min(560px, calc(100% - 40px));
+  margin: 24px 0;
+  padding: clamp(22px, 3vw, 30px);
+  text-align: center;
+  background: var(--paper-soft);
+  border: 1px solid rgba(255, 255, 255, 0.86);
+  border-radius: 8px;
+  box-shadow: 0 18px 60px rgba(78, 54, 44, 0.16);
+  backdrop-filter: blur(8px);
+  animation: card-in 900ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+.overline {
+  margin: 0 0 16px;
+  color: var(--gold);
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  animation: fade-up 700ms ease both;
+  animation-delay: 220ms;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(40px, 5.8vw, 64px);
+  font-weight: 400;
+  line-height: 0.96;
+  animation: fade-up 700ms ease both;
+  animation-delay: 340ms;
+}
+
+h1 span {
+  display: inline-block;
+  margin: 0 10px;
+  color: var(--rose);
+  font-size: 0.58em;
+  font-style: italic;
+  vertical-align: 0.08em;
+}
+
+.lead {
+  max-width: 410px;
+  margin: 16px auto 0;
+  color: var(--muted);
+  font-size: clamp(17px, 1.8vw, 20px);
+  line-height: 1.5;
+  animation: fade-up 700ms ease both;
+  animation-delay: 460ms;
+}
+
+.details {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  margin: 20px 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--line);
+  animation: fade-up 700ms ease both;
+  animation-delay: 580ms;
+}
+
+.details div {
+  min-height: 76px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  gap: 8px;
+  padding: 16px 12px;
+  background: rgba(255, 253, 249, 0.88);
+}
+
+.details .wide {
+  grid-column: 1 / -1;
+  min-height: 64px;
+}
+
+.details span {
+  color: var(--sage);
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.details strong {
+  font-size: clamp(17px, 1.8vw, 21px);
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+.text {
+  margin: 0 auto;
+  max-width: 440px;
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.55;
+  animation: fade-up 700ms ease both;
+  animation-delay: 700ms;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 22px;
+  animation: fade-up 700ms ease both;
+  animation-delay: 820ms;
+}
+
+.button {
+  min-height: 46px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 18px;
+  border-radius: 6px;
+  border: 1px solid var(--rose);
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+}
+
+.button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 22px rgba(102, 62, 57, 0.16);
+}
+
+.primary {
+  color: #fff;
+  background: var(--rose);
+  position: relative;
+  overflow: hidden;
+}
+
+.primary::after {
+  content: "";
+  position: absolute;
+  inset: -40% -70%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.42), transparent);
+  transform: translateX(-65%) rotate(12deg);
+  animation: button-shine 3.8s ease-in-out infinite;
+}
+
+@keyframes slow-pan {
+  from {
+    transform: scale(1.04) translate3d(-10px, -6px, 0);
+  }
+
+  to {
+    transform: scale(1.08) translate3d(12px, 8px, 0);
+  }
+}
+
+@keyframes frame-glow {
+  0%,
+  100% {
+    border-color: rgba(178, 139, 74, 0.34);
+  }
+
+  50% {
+    border-color: rgba(178, 139, 74, 0.66);
+  }
+}
+
+@keyframes glow-drift {
+  from {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 0.82;
+  }
+
+  to {
+    transform: translate3d(-120px, 90px, 0) scale(1.18);
+    opacity: 0.5;
+  }
+}
+
+@keyframes petal-fall {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -20px, 0) rotate(0deg);
+  }
+
+  12% {
+    opacity: 0.8;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate3d(44px, calc(100vh + 120px), 0) rotate(260deg);
+  }
+}
+
+@keyframes card-in {
+  from {
+    opacity: 0;
+    transform: translateY(24px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes button-shine {
+  0%,
+  42% {
+    transform: translateX(-65%) rotate(12deg);
+  }
+
+  70%,
+  100% {
+    transform: translateX(72%) rotate(12deg);
+  }
+}
+
+@media (max-width: 620px) {
+  .page {
+    padding: 14px;
+  }
+
+  .invitation {
+    min-height: calc(100vh - 28px);
+  }
+
+  .visual {
+    background:
+      linear-gradient(180deg, rgba(255, 250, 244, 0.94), rgba(255, 250, 244, 0.72)),
+      url("./assets/wedding-bg.png") center / cover no-repeat;
+  }
+
+  .visual::after {
+    inset: 12px;
+  }
+
+  .card {
+    width: calc(100% - 28px);
+    margin: 30px 0;
+  }
+
+  .overline {
+    margin-bottom: 12px;
+  }
+
+  h1 span {
+    display: block;
+    margin: 0 0 4px;
+    font-size: 0.48em;
+  }
+
+  .lead {
+    margin-top: 16px;
+  }
+
+  .details {
+    margin: 20px 0;
+  }
+
+  .details div {
+    min-height: 70px;
+    padding: 14px 12px;
+  }
+
+  .details {
+    grid-template-columns: 1fr;
+  }
+
+  .details .wide {
+    grid-column: 1;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+
+  .button {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+}
