@@ -358,7 +358,12 @@ h1 {
   display: grid;
   grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
   gap: clamp(28px, 5vw, 70px);
-  align-items: center;
+  align-items: end;
+}
+
+.venue-visual {
+  display: grid;
+  gap: 28px;
 }
 
 .venue-photo {
@@ -376,22 +381,17 @@ h1 {
 }
 
 .venue-copy {
-  padding: clamp(24px, 4vw, 46px) 0;
+  padding: 0;
 }
 
-.venue-copy .button {
-  margin-top: 28px;
-  color: var(--white);
-  background: var(--ink);
-}
-
-.map-section {
-  padding-top: 0;
+.venue-map {
+  display: grid;
+  gap: 16px;
 }
 
 .yandex-map {
   width: 100%;
-  min-height: 430px;
+  min-height: 520px;
   position: relative;
   display: grid;
   place-items: center;

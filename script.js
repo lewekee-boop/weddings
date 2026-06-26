@@ -6,10 +6,6 @@ const invitation = {
   coordinates: [57.143036, 65.554741],
 };
 
-const mapLink = document.querySelector("#map-link");
-
-mapLink.href = invitation.mapUrl;
-
 function initYandexMap() {
   const mapContainer = document.querySelector("#yandex-map");
 
