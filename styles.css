@@ -1,5 +1,5 @@
 :root {
-  --ink: #142033;
+  --ink: #344966;
   --deep: #1d2d44;
   --cloudy: #344966;
   --sky: #c7d9e5;
@@ -71,26 +71,11 @@ img {
   opacity: 0.52;
 }
 
-.cover-mark {
-  position: absolute;
-  left: 50%;
-  top: 48%;
-  color: rgba(157, 128, 108, 0.12);
-  font-family: Arial, sans-serif;
-  font-size: clamp(220px, 34vw, 520px);
-  font-weight: 700;
-  letter-spacing: -0.08em;
-  line-height: 0.72;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-  user-select: none;
-}
-
 .cover-date {
   position: absolute;
   top: 50%;
   z-index: 3;
-  color: rgba(29, 45, 68, 0.78);
+  color: rgba(52, 73, 102, 0.78);
   font-family: Arial, sans-serif;
   font-size: 11px;
   font-weight: 700;
@@ -136,7 +121,7 @@ img {
 }
 
 .eyebrow {
-  color: rgba(29, 45, 68, 0.72);
+  color: rgba(52, 73, 102, 0.72);
   align-self: start;
 }
 
@@ -147,7 +132,7 @@ img {
   align-self: center;
   overflow: hidden;
   border-radius: 48% 48% 4px 4px / 22% 22% 4px 4px;
-  border: 1px solid rgba(22, 20, 18, 0.24);
+  border: 1px solid rgba(52, 73, 102, 0.24);
   background: var(--sky);
   box-shadow: 0 34px 90px rgba(14, 27, 48, 0.22);
 }
@@ -223,7 +208,7 @@ h1 {
 .hero-date {
   margin: 0;
   align-self: end;
-  color: rgba(22, 20, 18, 0.76);
+  color: rgba(52, 73, 102, 0.82);
   font-family: Arial, sans-serif;
   font-size: clamp(15px, 1.7vw, 22px);
   letter-spacing: 0.32em;
@@ -405,7 +390,7 @@ h1 {
 }
 
 .map-fallback {
-  color: rgba(29, 45, 68, 0.5);
+  color: rgba(52, 73, 102, 0.5);
   font-family: Arial, sans-serif;
   font-size: 12px;
   font-weight: 700;
@@ -508,11 +493,6 @@ h1 {
   .hero::after {
     width: 118vw;
     height: 118vw;
-  }
-
-  .cover-mark {
-    top: 52%;
-    font-size: clamp(170px, 54vw, 260px);
   }
 
   .cover-date {
