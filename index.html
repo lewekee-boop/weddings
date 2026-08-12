@@ -35,6 +35,27 @@
         </p>
       </section>
 
+      <section class="section countdown" aria-label="Счетчик до торжества">
+        <div class="section-heading">
+          <span>до нашего торжества</span>
+          <h2 id="countdown-title">Считаем дни</h2>
+        </div>
+        <div class="countdown-grid" data-countdown>
+          <div>
+            <strong data-countdown-days>0</strong>
+            <span>дней</span>
+          </div>
+          <div>
+            <strong data-countdown-hours>0</strong>
+            <span>часов</span>
+          </div>
+          <div>
+            <strong data-countdown-minutes>0</strong>
+            <span>минут</span>
+          </div>
+        </div>
+      </section>
+
       <section class="section timeline" aria-label="Программа дня">
         <div class="section-heading">
           <span>программа дня</span>
@@ -45,8 +66,8 @@
           <article class="timeline-item">
             <time datetime="2026-09-05T14:30">14:30</time>
             <div>
-              <h3>Сбор гостей</h3>
-              <p>Встречаемся у Дворца бракосочетания.</p>
+              <h3>Встреча у Дворца</h3>
+              <p>Собираемся у Дворца бракосочетания.</p>
             </div>
           </article>
 
@@ -54,18 +75,35 @@
             <time datetime="2026-09-05T15:00">15:00</time>
             <div>
               <h3>Торжественная церемония</h3>
-              <p>Начало регистрации брака.</p>
+              <p>Начало во Дворце бракосочетания.</p>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <time class="time-range" datetime="2026-09-05T15:30">15:30-17:00</time>
+            <div>
+              <h3>Прогулка по городу</h3>
+              <p>Фотосессия и время для красивых кадров.</p>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <time datetime="2026-09-05T17:30">17:30</time>
+            <div>
+              <h3>Welcome-time</h3>
+              <p>Встречаемся в ресторане «Бархат».</p>
             </div>
           </article>
         </div>
       </section>
 
-      <section class="section venue" aria-label="Место церемонии">
+      <section class="section venue" aria-label="Локации дня">
         <div class="venue-visual">
           <div class="venue-copy">
-            <span class="label">место церемонии</span>
-            <h2>Дворец бракосочетания</h2>
-            <p>Тюмень, ул. Малыгина, 85</p>
+            <span class="label">локации дня</span>
+            <h2>Дворец бракосочетания и ресторан «Бархат»</h2>
+            <p>15:00 - торжественная церемония во Дворце бракосочетания</p>
+            <p>17:30 - welcome-time в ресторане «Бархат», Тюмень, 6-й км Салаирского тракта, 19</p>
           </div>
           <div class="venue-photo">
             <img src="./assets/palace-tyumen.png" alt="Дворец бракосочетания в Тюмени">
@@ -73,7 +111,7 @@
         </div>
         <div class="venue-map">
           <span class="label">как добраться</span>
-          <h2>Карта</h2>
+          <h2>Карта ресторана</h2>
           <div class="yandex-map" id="yandex-map">
             <span class="map-fallback">Карта загружается</span>
           </div>
